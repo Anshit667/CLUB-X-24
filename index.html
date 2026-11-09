@@ -1,0 +1,152 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Free Fire Tournament Pro</title>
+
+<style>
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: #101014;
+  color: white;
+  font-family: Arial, sans-serif;
+}
+
+header {
+  background: #1c1c22;
+  padding: 20px;
+  text-align: center;
+  border-bottom: 2px solid #ff3030;
+}
+
+header h1 {
+  color: #ff3838;
+  font-size: 24px;
+}
+
+.hero {
+  text-align: center;
+  padding: 55px 15px;
+}
+
+.hero h2 {
+  font-size: 32px;
+  margin-bottom: 12px;
+}
+
+.hero p {
+  color: #aaa;
+  margin-bottom: 25px;
+}
+
+.modes {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  flex-wrap: wrap;
+  padding: 15px;
+}
+
+.mode {
+  background: #25252d;
+  border: 1px solid #ff3838;
+  color: white;
+  padding: 18px 25px;
+  border-radius: 12px;
+  cursor: pointer;
+}
+
+.mode:hover {
+  background: #ff3030;
+}
+
+.tournament {
+  background: #202027;
+  margin: 25px auto;
+  padding: 25px;
+  max-width: 420px;
+  border-radius: 15px;
+  text-align: center;
+}
+
+.tournament h2 {
+  color: #ff4545;
+  margin-bottom: 15px;
+}
+
+button {
+  background: #ff3030;
+  color: white;
+  border: none;
+  padding: 13px 25px;
+  border-radius: 8px;
+  cursor: pointer;
+  margin-top: 18px;
+}
+
+footer {
+  text-align: center;
+  padding: 25px;
+  color: #888;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+  <h1>FF TOURNAMENT PRO</h1>
+  <p>Professional Gaming Arena</p>
+</header>
+
+<section class="hero">
+  <h2>PLAY. COMPETE. WIN.</h2>
+  <p>Join tournaments and show your skills!</p>
+</section>
+
+<h3 style="text-align:center;">SELECT YOUR MODE</h3>
+
+<section class="modes">
+  <button class="mode" onclick="selectMode('Solo')">SOLO</button>
+  <button class="mode" onclick="selectMode('Duo')">DUO</button>
+  <button class="mode" onclick="selectMode('Squad')">SQUAD</button>
+</section>
+
+<section class="tournament">
+  <h2>UPCOMING TOURNAMENT</h2>
+  <p id="selected">Selected Mode: Solo</p>
+  <p>Entry: Free</p>
+  <button onclick="joinTournament()">
+    JOIN TOURNAMENT
+  </button>
+</section>
+
+<footer>
+  <p>© 2026 Free Fire Tournament Pro</p>
+  <p>Fan-made tournament platform. Not affiliated with Garena.</p>
+</footer>
+
+<script>
+let currentMode = "Solo";
+
+function selectMode(mode) {
+  currentMode = mode;
+  document.getElementById("selected").innerText =
+    "Selected Mode: " + mode;
+}
+
+function joinTournament() {
+  alert("You selected " + currentMode +
+  ". Registration system coming soon!");
+}
+</script>
+
+</body>
+</html>
